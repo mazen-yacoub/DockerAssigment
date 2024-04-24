@@ -2,12 +2,9 @@
 import re
 from collections import Counter
 
-# Path to the text file
-path = "C:\\Users\\myacoubalex\\Desktop\\random_paragraphs.txt"
-
-# Read the text file
-with open(path, "r") as file:
-    text = file.read()
+# Open the file in read mode ("r")
+with open("random_paragraphs.txt", "r") as file:
+  text = file.read()
 
 # Define stop words
 StopWords = [
@@ -30,7 +27,7 @@ filtered_words = [word for word in words if word not in StopWords]
 new_text = " ".join(filtered_words)
 
 # Write the filtered text back to the file
-with open(path, "w") as file:
+with open("random_paragraphs.txt", "w") as file:
     file.write(new_text)
 
 # Print the filtered text
